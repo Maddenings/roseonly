@@ -1,0 +1,98 @@
+//导入默认样式
+
+//sass --watch homePage.scss:homePage.css --style expanded
+
+@import "./_default.scss";
+
+//变量
+$ys:#414141;
+$width:100%;
+$margin:0 auto;
+
+
+
+#nav {
+    width: $width;
+    background: $ys;
+    height: 40px;
+    .nav {
+        height: 40px;
+        width: 1280px;
+        margin: $margin;
+        span {
+            height: 40px;
+            display: block;
+            width: 500px;
+            @include bkd("../img/nav0.1.png", no-repeat, left);
+            padding-left: 25px;
+            line-height: 40px;
+            float: left;
+           
+            background: {
+                size: 16px;
+            }
+            a{
+                display: block;
+                width: 128px;
+                height: 40px;
+                float: left;
+
+                &:nth-child(1) {
+                    @include bkd("../img/nav0.2.png", no-repeat, left);
+                    line-height: 40px;
+                    color: #fff;
+                    border-right: 1px black solid;
+                    width: 70px;
+                    text-align: center;
+                    font-size: 13px;
+
+                    background: {
+                        size: 18px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    @include bkd("../img/nav03.png", no-repeat, center);
+                    background-size: 60%;
+                    border-right: 1px solid black;
+                }
+
+                &:nth-child(3) {
+                    @include bkd("../img/nav2.svg", no-repeat, center);
+                    background-size: 70%;
+                    border-right: 1px solid #fff;
+
+                    &:hover {
+                        background: #fff url("../img/nav2.svg") no-repeat center;
+                        background-size: 70%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    @include bkd("../img/nav3 (2).svg", no-repeat, center);
+                    background-size: 100%;
+
+                    &:hover {
+                        background: #fff url('../img/nav3 (2).svg') no-repeat center;
+                        background-size: 100%;
+                    }
+                }
+
+            }
+        }
+        .nav_right {
+            height: 40px;
+            width: 100px;
+            float: right;
+            line-height: 40px;
+            a{
+                display: inline block;
+                border-right:1px solid #fff; 
+                margin: 0 2px;
+                &:nth-child(3){
+                    border-right:none; 
+                }
+            }
+        }
+    }
+}

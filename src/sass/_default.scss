@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul,li,ol,dl,dt,dd{
+    list-style: none;
+}
+//封装背景
+@mixin bkd($a, $b, $c,) {
+    background: {
+        image: url($a);
+        repeat: $b;
+        position: $c;
+    }
+}
