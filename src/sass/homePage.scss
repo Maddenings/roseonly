@@ -48,9 +48,10 @@
                     padding-left: 45px;
                     width: 55px;
                     display: none;
-                    cursor:pointer;
+                    cursor: pointer;
                 }
-                &:hover p{
+
+                &:hover p {
                     display: block;
                 }
             }
@@ -107,9 +108,11 @@
 
         .nav_right {
             height: 40px;
-            width: 200px;
+            width: 125px;
             float: right;
             line-height: 40px;
+            position: relative;
+            margin-right: 75px;
 
             a {
                 display: inline;
@@ -121,7 +124,62 @@
                     border-right: none;
                 }
             }
+
+            .log {
+                width: 300px;
+                height: 170px;
+                background: #fff;
+                position: absolute;
+                z-index: 10;
+                left: -190px;
+                display: none;
+
+                p {
+                    padding: 5px 0 15px 100px;
+                    overflow: hidden;
+                    border-bottom: 1px solid #414141;
+
+                    a {
+                        display: block;
+                        color: #414141;
+                        float: left;
+                        line-height: 16px;
+
+                        &:nth-child(2) {
+                            border-right: none;
+                        }
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 90px;
+                    height: 90px;
+                    margin: 20px 0 0 15px;
+                    float: left;
+
+                }
+
+                nav {
+                    width: 150px;
+                    line-height: 20px;
+                    margin: 0 20px;
+                    float: left;
+                    margin-top: 20px;
+                    font-size: 12px;
+
+                    strong {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &:hover .log {
+                display: block;
+                z-index: 200;
+            }
         }
+
     }
 }
 
@@ -147,6 +205,13 @@
     width: 100%;
     height: 40px;
     background: #414141;
+
+    #ceiling {
+        width: 100%;
+        height: 40px;
+        background: #414141;
+        position: absolute;
+    }
 
     .navigation {
         width: $one;
@@ -180,6 +245,8 @@
                 display: none;
                 border-bottom: 2px solid #414141;
                 background: #ffff;
+                z-index: 100;
+
                 .altj_ul {
                     width: $one;
                     min-height: 320px;
@@ -220,202 +287,296 @@
     height: 450px;
     border: 1px solid black;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    .box{
+        width: $one;
+        height:450px;
+        position: relative;
+        ul{
+            width:700%;
+            position: absolute;
+            left: 0;
+            top:0;
+            li{ width: $one;
+                height:450px;
+                float: left;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .pic_left{
+            width:50px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top:50%;
+            margin-top: -25px;
+            display: none;
+            z-index: 100;
+            @include bkd("../img/icon-slides.png",no-repeat,-83px)
+        }
+        .pic_right{
+            width:50px;
+            height: 100px;
+            position: absolute;
+            right: 0;
+            top:50%;
+            margin-top: -25px;
+            display: none;
+            z-index: 50;
+            @include bkd("../img/icon-slides.png",no-repeat,-115px)
+        }
+        .dot{
+            width:145px;
+            height:15px;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            margin-left: -72px;
+            z-index: 50;
+            a{
+                display: block;
+                width: 12px;
+                height:12px;
+                background: #fff;
+                border-radius: 50%;
+                float: left;
+                margin: 0 6px;
+            }
+        }
+    }
+   
 }
 
-/*新人礼卷*/ 
-#xrlj{
-    width:$one;
-    height:450px;
+
+
+
+
+
+
+
+
+
+/*新人礼卷*/
+#xrlj {
+    width: $one;
+    height: 450px;
     margin: 0 auto;
-    img{
+
+    img {
         display: block;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
 }
 
 /*至臻献礼，全新上市*/
-#zzxl{
-    width:$one;
-    height:450px;
+#zzxl {
+    width: $one;
+    height: 450px;
     margin: 0 auto;
-    cursor:pointer;
-    img{
+    cursor: pointer;
+
+    img {
         display: block;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
-} 
+}
 
 /*鲜花玫瑰*/
-#xhmg{
-    width:$one;
-    height:450px;
+#xhmg {
+    width: $one;
+    height: 450px;
     margin: 0 auto;
-    cursor:pointer;
-    img{
+    cursor: pointer;
+
+    img {
         display: block;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
-} 
+}
 
 /*经典永续*/
-#jdyx{
-    width:$one;
-    height:830px;
-    margin:  0 auto;
-    img{
+#jdyx {
+    width: $one;
+    height: 830px;
+    margin: 0 auto;
+
+    img {
         display: inline-block;
     }
-} 
+}
 
 /*星座*/
-#xingz{
-    width:$one;
-    height:630px;
+#xingz {
+    width: $one;
+    height: 630px;
     margin: 0 auto;
-    img{
+
+    img {
         display: inline-block;
         float: left;
     }
-} 
+}
 
 /*心心相吸*/
-#xxxx{
-    width:$one;
-    height:645px;
+#xxxx {
+    width: $one;
+    height: 645px;
     margin: 0 auto;
-    img{
+
+    img {
         display: inline-block;
         height: 100%;
     }
-}  
+}
 
 /*萌宠礼盒*/
-#mclh{
-    width:$one;
+#mclh {
+    width: $one;
     height: 480px;
     margin: 0 auto;
-    img{
+
+    img {
         height: 100%;
     }
-} 
+}
 
-/*玫瑰公仔，全是爱，经典永续*/ 
-#qsa{
-    width:$one;
-    height:690px;
+/*玫瑰公仔，全是爱，经典永续*/
+#qsa {
+    width: $one;
+    height: 690px;
     margin: 0 auto;
-    img{
+
+    img {
         height: 100%;
         border: none;
     }
 }
 
 /*玫瑰珠宝*/
-#mgzb{
-    width:$one;
+#mgzb {
+    width: $one;
     height: 695px;
     margin: 0 auto;
-    img{
+
+    img {
         width: 100%;
     }
-} 
+}
 
 /*生辰石*/
-#scs{
-    width:$one;
-    height:415px;
+#scs {
+    width: $one;
+    height: 415px;
     margin: 0 auto;
-    img{
-        height:100%;
+
+    img {
+        height: 100%;
     }
-} 
+}
 
 /*玫瑰散香，玫瑰香氛*/
-#mgsx{
-    width:$one;
-    height:950px;
+#mgsx {
+    width: $one;
+    height: 950px;
     margin: 0 auto;
-    img{
-        height:100%;
-    }
-} 
 
-/*玫瑰饰品，高端定制，Gift Card*/ 
-#gift{
-    width:$one;
-    height:670px;
+    img {
+        height: 100%;
+    }
+}
+
+/*玫瑰饰品，高端定制，Gift Card*/
+#gift {
+    width: $one;
+    height: 670px;
     margin: 0 auto;
-    img{
-        height:100%;
+
+    img {
+        height: 100%;
     }
 }
 
 /*尾部*/
-#bottom{
-    width:100%;
+#bottom {
+    width: 100%;
     background: #414141;
     height: 260px;
-    .bottom{
+
+    .bottom {
         width: $one;
         height: 210px;
-        padding-top:50px; 
+        padding-top: 50px;
         margin: 0 auto;
-       ul{
-           li{
-               float: left;
-               margin: 0 65px;
-            h6{
-                font-size: 16px;
-                color: #fff;
-                margin-bottom: 20px;
-            }
-            a{
-                display: block;
-                color: #AFAFAF;
-                line-height: 30px;
-                i{
-                    font-size: 22px;
+
+        ul {
+            li {
+                float: left;
+                margin: 0 65px;
+
+                h6 {
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 20px;
                 }
+
+                a {
+                    display: block;
+                    color: #AFAFAF;
+                    line-height: 30px;
+
+                    i {
+                        font-size: 22px;
+                    }
+                }
+
             }
-            
-           }
-           img{
+
+            img {
                 width: 100px;
                 height: 100px;
                 display: block;
                 float: left;
-                margin:0 30px 0 80px; 
-                
+                margin: 0 30px 0 80px;
+
             }
-            p{  
+
+            p {
                 width: 100px;
                 float: left;
                 font-size: 12px;
                 line-height: 20px;
                 color: #AFAFAF;
-                strong{
+
+                strong {
                     font-size: 16px;
                 }
             }
-            span{
+
+            span {
                 display: inline-block;
-                margin:35px 0 0 150px; 
+                margin: 35px 0 0 150px;
                 font-size: 12px;
                 color: #AFAFAF;
             }
-       } 
-       .copyright{
-        width: 1280px;
-        height: 60px;
-        margin: 0 auto;
-        text-align: right;
-        font-size: 12px;
-        color: #AFAFAF;
-      
+        }
+
+        .copyright {
+            width: 1280px;
+            height: 60px;
+            margin: 0 auto;
+            text-align: right;
+            font-size: 12px;
+            color: #AFAFAF;
+
+        }
     }
-    }
-   
-} 
+
+}
