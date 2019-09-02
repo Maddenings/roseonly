@@ -8,6 +8,9 @@ a{
 ul,li,ol,dl,dt,dd{
     list-style: none;
 }
+i,em{
+    font-style: normal;
+}
 //封装背景
 @mixin bkd($a, $b, $c,) {
     background: {

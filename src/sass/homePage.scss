@@ -15,7 +15,7 @@
 
     .nav {
         height: 40px;
-        width: 1280px;
+        width: $one;
         margin: $margin;
 
         span {
@@ -48,6 +48,7 @@
                     padding-left: 45px;
                     width: 55px;
                     display: none;
+                    cursor:pointer;
                 }
                 &:hover p{
                     display: block;
@@ -148,7 +149,7 @@
     background: #414141;
 
     .navigation {
-        width: 1280px;
+        width: $one;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -163,7 +164,6 @@
                 display: block;
                 font-size: 14px;
                 color: #fff;
-                transition: 0.7s;
                 position: relative;
 
                 &:hover {
@@ -178,11 +178,10 @@
                 position: absolute;
                 left: 0;
                 display: none;
-
+                border-bottom: 2px solid #414141;
+                background: #ffff;
                 .altj_ul {
                     width: $one;
-                    background: green;
-                    border-bottom: 2px solid #414141;
                     min-height: 320px;
                     position: relative;
                     margin: 0 auto;
@@ -217,8 +216,206 @@
 
 /*轮播图*/
 #slideshow {
-    width: 1280px;
+    width: $one;
     height: 450px;
     border: 1px solid black;
     margin: 0 auto;
 }
+
+/*新人礼卷*/ 
+#xrlj{
+    width:$one;
+    height:450px;
+    margin: 0 auto;
+    img{
+        display: block;
+        width: 100%;
+        height:100%;
+    }
+}
+
+/*至臻献礼，全新上市*/
+#zzxl{
+    width:$one;
+    height:450px;
+    margin: 0 auto;
+    cursor:pointer;
+    img{
+        display: block;
+        width: 100%;
+        height:100%;
+    }
+} 
+
+/*鲜花玫瑰*/
+#xhmg{
+    width:$one;
+    height:450px;
+    margin: 0 auto;
+    cursor:pointer;
+    img{
+        display: block;
+        width: 100%;
+        height:100%;
+    }
+} 
+
+/*经典永续*/
+#jdyx{
+    width:$one;
+    height:830px;
+    margin:  0 auto;
+    img{
+        display: inline-block;
+    }
+} 
+
+/*星座*/
+#xingz{
+    width:$one;
+    height:630px;
+    margin: 0 auto;
+    img{
+        display: inline-block;
+        float: left;
+    }
+} 
+
+/*心心相吸*/
+#xxxx{
+    width:$one;
+    height:645px;
+    margin: 0 auto;
+    img{
+        display: inline-block;
+        height: 100%;
+    }
+}  
+
+/*萌宠礼盒*/
+#mclh{
+    width:$one;
+    height: 480px;
+    margin: 0 auto;
+    img{
+        height: 100%;
+    }
+} 
+
+/*玫瑰公仔，全是爱，经典永续*/ 
+#qsa{
+    width:$one;
+    height:690px;
+    margin: 0 auto;
+    img{
+        height: 100%;
+        border: none;
+    }
+}
+
+/*玫瑰珠宝*/
+#mgzb{
+    width:$one;
+    height: 695px;
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+} 
+
+/*生辰石*/
+#scs{
+    width:$one;
+    height:415px;
+    margin: 0 auto;
+    img{
+        height:100%;
+    }
+} 
+
+/*玫瑰散香，玫瑰香氛*/
+#mgsx{
+    width:$one;
+    height:950px;
+    margin: 0 auto;
+    img{
+        height:100%;
+    }
+} 
+
+/*玫瑰饰品，高端定制，Gift Card*/ 
+#gift{
+    width:$one;
+    height:670px;
+    margin: 0 auto;
+    img{
+        height:100%;
+    }
+}
+
+/*尾部*/
+#bottom{
+    width:100%;
+    background: #414141;
+    height: 260px;
+    .bottom{
+        width: $one;
+        height: 210px;
+        padding-top:50px; 
+        margin: 0 auto;
+       ul{
+           li{
+               float: left;
+               margin: 0 65px;
+            h6{
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+            a{
+                display: block;
+                color: #AFAFAF;
+                line-height: 30px;
+                i{
+                    font-size: 22px;
+                }
+            }
+            
+           }
+           img{
+                width: 100px;
+                height: 100px;
+                display: block;
+                float: left;
+                margin:0 30px 0 80px; 
+                
+            }
+            p{  
+                width: 100px;
+                float: left;
+                font-size: 12px;
+                line-height: 20px;
+                color: #AFAFAF;
+                strong{
+                    font-size: 16px;
+                }
+            }
+            span{
+                display: inline-block;
+                margin:35px 0 0 150px; 
+                font-size: 12px;
+                color: #AFAFAF;
+            }
+       } 
+       .copyright{
+        width: 1280px;
+        height: 60px;
+        margin: 0 auto;
+        text-align: right;
+        font-size: 12px;
+        color: #AFAFAF;
+      
+    }
+    }
+   
+} 
