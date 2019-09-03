@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>登陆页面</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
-    <h1>登陆页面</h1>
+    <!-- 添加头部 -->
+    <div id="register_top"></div>
+
+    <!-- 大图 -->
+    <div id="box">
+        <div class="large">
+            <img src="img/15169542293513375.jpg" alt="">
+        </div>
+        <!-- 注册账号模块 -->
+        <div class="register_1">
+            <ul class="cjzh">
+                <li> <select>
+                        <option>中国</option>
+                        <option>澳大利亚</option>
+                        <option>韩国</option>
+                        <option>加拿大</option>
+                        <option>马来西亚</option>
+                        <option>美国</option>
+                        <option>日本</option>
+                        <option>新加坡</option>
+                        <option>英国</option>
+                        <option>中国澳门</option>
+                        <option>中国台湾</option>
+                        <option>中国香港</option>
+                    </select>
+                </li>
+                <li>
+                    <span class="region">+86</span>
+                    <input type="text" placeholder="请输入手机号" class="shouji">
+                </li>
+               
+                <li>
+                    <input type="text" placeholder="请输入密码">
+                </li>
+                <div>
+                    <a href="javaScript:;" class="kszc">快速注册</a>
+                    <a href="javaScript:;">忘记密码？</a>
+                </div>
+                <a href="javaScript:;" class="denglu">登陆</a>
+                <p>🚚roseonly支持门店城市同城速递服务!</p>
+            </ul>
+        </div>
+    </div>
+
+        <!-- 添加尾部 -->
+        <div id="register_bottom"></div>
+
+
+
+
 </body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/index.min.js"></script>
+<script>
+ //登陆页面头部
+ $("#register_top").load("head.html");
+  
+  // 注册页面尾部
+$("#register_bottom").load("tail.html");
+//点击快速注册 跳转到登陆页面
+$(".kszc").click(function(){
+  location.href = "registration.html"
+})
+</script>
 </html>

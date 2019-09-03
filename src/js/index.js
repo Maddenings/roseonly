@@ -32,6 +32,7 @@ $(function () {
     let num = $('.atlas').children().length;
     let off = false;
     let index_s = 0;
+    let timer = null;
     //移入事件
     $('.box').mouseover(function () {
         $(".pic_left").css("display", "block");
@@ -115,4 +116,64 @@ $(function () {
         location.href = "registration.html"
     })
 
+    $("#index").click(function(){
+        location.href = "homePage.html"
+    })
+    //自动轮播
+    timer = setInterval(function(){
+        if (index == num - 1) {
+            $('.atlas').css({
+                "left": 0
+            })
+            index = 1
+        } else {
+            index++;
+        }
+        carousel(index)
+    },4000)
+    $(".box").mouseenter(function(){
+        clearInterval(timer);
+    })
+    $(".box").mouseleave(function(){
+        timer = setInterval(function(){
+            if (index == num - 1) {
+                $('.atlas').css({
+                    "left": 0
+                })
+                index = 1
+            } else {
+                index++;
+            }
+            carousel(index)
+        },4000)
+    })
+    
+    $(".dot").children().each(function(){
+        $(this).click(function(){
+           index = $(this).index();
+           carousel(index);
+        })
+    })
+
+    //返回顶部
+    $(window).scroll(function () {
+        let top = parseInt($(this).scrollTop());
+        if (top > 800) {
+            $("#roof").animate({
+                opacity: 'show'
+              }, "slow");
+        } else {
+            $("#roof").animate({
+                opacity: "hide"
+            },"slow")
+        } 
+       
+    })
+    $("#roof").click(function(){
+        $("body,html").animate({
+            "scrollTop" : 0
+        },1000);
+        return false;
+    })
+   
 })

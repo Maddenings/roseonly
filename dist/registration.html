@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/regitor.css">
 </head>
+
 <body>
-    <h1>注册页面</h1>
+    <!-- 添加头部 -->
+    <div id="register_top"></div>
+
+    <!-- 大图 -->
+    <div id="box">
+        <div class="large">
+            <img src="img/15169542293513375.jpg" alt="">
+        </div>
+        <!-- 注册账号模块 -->
+        <div class="register_1">
+            <ul class="cjzh">
+                <li> <select>
+                        <option>中国</option>
+                        <option>澳大利亚</option>
+                        <option>韩国</option>
+                        <option>加拿大</option>
+                        <option>马来西亚</option>
+                        <option>美国</option>
+                        <option>日本</option>
+                        <option>新加坡</option>
+                        <option>英国</option>
+                        <option>中国澳门</option>
+                        <option>中国台湾</option>
+                        <option>中国香港</option>
+                    </select>
+                </li>
+                <li>
+                    <span class="region">+86</span>
+                    <input type="text" placeholder="请输入手机号" class="shouji">
+                    <div class="shuji_1">1111111</div>
+                </li>
+                <li>
+                    <input type="text" placeholderf="图片验证码" class="tpyzm">
+                    <img src="img/newImage.jsp.jfif" alt="">
+                    <div class="tpyzm_1"></div>
+                </li>
+                <li>
+                    <input type="text" placeholder="发送验证码" class="fsyzm">
+                    <span class="note">发送验证码</span>
+                    <div class="fsyzm_1"></div>
+                </li>
+                <li>
+                    <input type="text" placeholder="6~16位数字或字母" class="mima">
+                    <div class="mima_1"></div>
+                </li>
+                <li class="pact">
+                    <input type="checkbox" class="choose">我已仔细阅读,理解并同意诺誓<a href="javaScript:;" class="hyzc">会员政策</a>
+                </li>
+                <a href="javaScript:;" class="yyzh">已有账号</a>
+
+                <a href="javaScript:;" class="chuangjian">创建账号</a>
+                <p>🚚roseonly支持门店城市同城速递服务!</p>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 添加尾部 -->
+    <div id="register_bottom"></div>
+
+
+
+
 </body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/register.min.js"></script>
+<script>
+    $(function () {
+        //注册页面头部
+        $("#register_top").load("head.html");
+        //跳转到登陆页面
+        $(".yyzh").click(function () {
+            location.href = "login.html"
+        })
+        //给(注册的协议)会员政策添加下划线
+        $(".hyzc").css({
+            "text-decoration": "underline",
+            "color": "black"
+        })
+        // 注册页面尾部
+        $("#register_bottom").load("tail.html");
+
+
+    })
+</script>
+
 </html>

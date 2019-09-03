@@ -13,7 +13,8 @@ gulp.task("js", () => {
         presets: ['@babel/env']
     }))
     .pipe(uglify())
-    .pipe(concat("main.min.js"))
+    //.pipe(concat("main.min.js"))
+    .pipe(rename({suffix : ".min"}))
     .pipe(gulp.dest("dist/js"))
 })
 gulp.task("css", () => {
