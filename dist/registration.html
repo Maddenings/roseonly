@@ -39,7 +39,7 @@
                 <li>
                     <span class="region">+86</span>
                     <input type="text" placeholder="请输入手机号" class="shouji">
-                    <div class="shuji_1">1111111</div>
+                    <div class="shouji_1"></div>
                 </li>
                 <li>
                     <input type="text" placeholderf="图片验证码" class="tpyzm">
@@ -52,7 +52,7 @@
                     <div class="fsyzm_1"></div>
                 </li>
                 <li>
-                    <input type="text" placeholder="6~16位数字或字母" class="mima">
+                    <input type="password" placeholder="6~16位数字或字母" class="mima">
                     <div class="mima_1"></div>
                 </li>
                 <li class="pact">
@@ -68,6 +68,24 @@
 
     <!-- 添加尾部 -->
     <div id="register_bottom"></div>
+    <!-- 固定定位 -->
+     <div id="code">
+        <img src="img/14945591270622918.svg" alt="">
+        <div class="code_1">
+            <img src="img/15555560350546942.png" alt="">
+        </div>
+    </div>
+    <div id="phone">
+        <img src="img/14703636967439422.svg" alt="">
+        <div class="phone_1">
+            <p>📱联系电话</p>
+            <em>400-1314-520</em>
+            <a href="javaScript:;">在线客服</a>
+        </div>
+    </div>
+    <div id="roof">
+        <img src="img/14703637041003761.svg" alt="">
+    </div>
 
 
 
@@ -75,8 +93,8 @@
 </body>
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/register.min.js"></script>
+<script src="js/jquery.cookie.min.js"></script>
 <script>
-    $(function () {
         //注册页面头部
         $("#register_top").load("head.html");
         //跳转到登陆页面
@@ -92,7 +110,7 @@
         $("#register_bottom").load("tail.html");
 
 
-    })
+    
 </script>
 
 </html>
