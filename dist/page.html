@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,69 @@
     <link rel="stylesheet" href="css/page.css">
     <title>购买页</title>
 </head>
+
 <body>
+    <!-- 引进头部 -->
     <div id="page_top"></div>
+    <!-- 物品详情 左边-->
+    <div id="page_center">
+        <div class="rose_left">
+            <div class="rose_img">
+                <img src="img/page/15457369070945077.png" alt="">
+                <!-- <img src="img/page/15458022172393698.png" alt="">
+                <img src="img/page/15458022172836891.png" alt="">
+                <img src="img/page/15458022173282870.png" alt="">
+                <img src="img/page/15458022173813831.png" alt=""> -->
+            </div>
+            <div class="rose_a">
+                <div class="f1"></div>
+                <a href="javaScript:;"><img src="img/page/15457369070945077_1.png" alt=""></a>
+                <a href="javaScript:;"><img src="img/page/15458022172393698_1.png" alt=""></a>
+                <a href="javaScript:;"><img src="img/page/15458022172836891_1.png" alt=""></a>
+                <a href="javaScript:;"><img src="img/page/15458022173282870_1.png" alt=""></a>
+                <a href="javaScript:;"><img src="img/page/15458022173813831_1.png" alt=""></a>
+                <div class="f2"></div>
+            </div>
+        </div>
+        <!--物品详情 右边-->
+        <div class="rose_right">
+            <div class="rose_right_one">经典永续 — 经典11支情动 80cm</div>
+            <div class="rose_right_two">1021010016</div>
+            <div class="rose_right_three"><span class="_three">价格:</span>￥1520</div>
+            <div class="rose_right_four"><span class="_four">颜色:</span>
+                <img src="img/page/15457369070319405_2.png" alt="">
+                <img src="img/page/15457369070945077_2.png" alt="">
+                <img src="img/page/14997568545682277_2.png" alt="">
+                <img src="img/page/15457319183827275_2.png" alt="">
+            </div>
+            <div class="rose_right_five"><span class="_five1">数量:</span>
+                <input type="text" value="1">
+                <div class = "_five2">
+                    <a href="javaScript:;" class="plus"></a>
+                    <a href="javaScript:;" class="minus"></a>
+                </div>
+            </div>
+            <a href="javaScript:;" class="ljgm">立即购买</a>
+            <a href="javaScript:;" class="jrgwc">加入购物车</a>
+            <p>服务承诺：官方正品&nbsp;&nbsp;&nbsp;免邮配送&nbsp;&nbsp;&nbsp;同城速递</p>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="page_bottom"></div>
+
 </body>
 <script src="js/jquery-1.12.4.min.js"></script>
 
 <script>
     //给购物页添加头部
     $("#page_top").load("head.html")
+    //给购物页添加尾部
+    $("#page_bottom").load("tail.html")
 </script>
+
 </html>
